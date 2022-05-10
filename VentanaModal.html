@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+
+  <style>
+
+
+body{
+    margin-right: auto;
+    margin-left: 20px;
+    background-color: grey;
+    
+}
+
+div:first-letter {
+font-size: 20px;
+font-style: italic;
+font-weight: bold;
+}
+
+.Par{
+    background-color: lightgrey;
+   
+}
+
+.Impar {
+    background-color: white;
+    
+}
+
+.UltimoVerso::after {
+    content: "...";
+}
+
+div {
+        margin: 20px;
+        padding-left: 20px;
+        padding: 0.9%;
+        width: 23%;
+        margin-bottom: 36px;
+
+    }
+
+p {
+    margin-bottom: 12px;
+}
+
+#titulo{
+    padding-left: 20px;
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+.ventana, .modal{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    transition: all 1s ease;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#boton-modal:checked ~ .modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background-color: white;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.contenedor header{
+   padding: 10px;
+   background: red; 
+   color: black;
+   
+}
+
+.contenedor label{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: black;
+    font-size: 15px;
+    cursor:pointer;
+}
+
+#boton-modal{
+    display: none;
+    
+}
+
+.lbl-modal{
+    background: white;
+    margin: 20px;
+    padding-left: 20px;
+    padding: 0.9%;
+    width: 23%;
+    margin-bottom: 36px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <p id="titulo">Soldadito marinero</p>
+
+  <div class="Impar">
+      <p>Él camina despacito que las prisas no son buenas</p>
+      <p>En su brazo dobladita, con cuidado la chaqueta</p>
+      <p>Luego pasa por la calle dónde los chavales juegan</p>
+      <p class="UltimoVerso">Él también quiso ser niño pero le pilló la guerra</p>
+  </div>
+
+  <div class="Par">
+      <p>Soldadito marinero conociste a una sirena</p>
+      <p>De esas que dicen te quiero si ven la cartera llena</p>
+      <p>Escogiste a la más guapa y a la menos buena</p>
+      <p class="UltimoVerso">Sin saber como ha venido te ha cogido la tormenta</p>
+  </div>
+
+  <div class="Impar">
+      <p>Él quería cruzar los mares y olvidar a su sirena</p>
+      <p>La verdad, no fue difícil cuando conoció a Mariela</p>
+      <p>Que tenía los ojos verdes y un negocio entre las piernas</p>
+      <p class="UltimoVerso">Hay que ver que puntería, no te arrimas a una buena</p>
+  </div>
+
+  <div class="Par">
+    <p>Soldadito marinero conociste a una sirena</p>
+    <p>De esas que dicen te quiero si ven la cartera llena</p>
+    <p>Escogiste la más guapa y a la menos buena</p>
+    <p class="UltimoVerso">Sin saber como ha venido te ha cogido la tormenta</p>
+</div>
+
+<div class="Impar">
+    <p>Después de un invierno malo, una mala primavera</p>
+    <p>Dime por que estas buscando una lágrima en la arena</p>
+    <p class="UltimoVerso">Después de un invierno malo</p>
+</div>
+
+    <input type="checkbox" id="boton-modal">
+    <label for="boton-modal" class="lbl-modal">+Información</label>
+
+    <div class="modal">
+        <div class="contenedor">
+            <header>Informacion extra!</header>
+            <label for="boton-modal">X</label>
+            <div class="contenido">
+                <p>Fuente: https://www.letras.com/fito-fitipaldis/614056/</p>
+
+                <a href="https://www.letras.com/fito-fitipaldis/">Fito y Fitipaldis</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
